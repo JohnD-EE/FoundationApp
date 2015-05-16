@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ZendSkeletonApplication
 =======================
 
@@ -76,7 +75,6 @@ project and you should be ready to go! It should look something like below:
             Allow from all
         </Directory>
     </VirtualHost>
-=======
-# ZfcBlog
-Experimenting with ZfcUser
->>>>>>> bdb31431d0fea3d8ec1cf13041b19c65ddfef7e1
+
+
+
