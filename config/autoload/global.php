@@ -10,7 +10,7 @@
  * control, so do not include passwords or other sensitive information in this
  * file.
  */
-
+//define('APP_ENV', 'dev');
 $configFile = dirname(__FILE__) . sprintf("/../env-settings/%s.ini", APP_ENV);
 $settings = parse_ini_file($configFile, true);
 

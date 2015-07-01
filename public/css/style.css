@@ -3,9 +3,22 @@ body {
     padding-bottom: 40px;
 }
 
-.zf-green {
-    color: #68b604;
+.brand-emphasis {
+    color: #333;
 }
+
+.bg-light-grey {
+    background-color: #e5e5e5;
+}
+
+.bg-dark {
+    background-color: #212121;
+}
+
+.vpadded-row {
+    padding: 50px 0;
+}
+
 
 .btn-success {
   background-color: #57a900;
