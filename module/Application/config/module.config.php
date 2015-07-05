@@ -48,6 +48,16 @@ return array(
                             ),
                         ),
                     ),
+                    'supportingpage' => array(
+                        'type' => 'literal',
+                        'options' => array(
+                            'route' => '/supportingpage',
+                            'defaults' => array(
+                                'controller' => 'Application\Controller\Index',
+                                'action' => 'supportingpage',
+                            ),
+                        ),
+                    ),
                 ),
             ),
         ),
