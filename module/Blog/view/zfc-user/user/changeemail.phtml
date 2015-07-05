@@ -1,6 +1,12 @@
-<div class="page-header">
-    <h1><?php echo sprintf($this->translate('Change Email for %s'), $this->zfcUserDisplayName()); ?></h1>
-</div>
+<div class="bg-light-grey">
+    <div class="container">
+        <div class="page-header">
+            <h1><?php echo sprintf($this->translate('Change Email for %s'), $this->zfcUserDisplayName()); ?></h1>
+        </div>
+        <div class="row vpadded-row">
+            <div class="col-md-5">
+
+
 <?php if ($status === true) : ?>
     <div class="alert alert-success"><?php echo $this->translate('Email address changed successfully.'); ?></div>
 <?php elseif ($status === false) : ?>
@@ -25,7 +31,7 @@ echo $this->form()->openTag($form);
             $element->setAttribute('class', 'form-control')
                 ->setAttribute('placeholder', $element->getLabel());
         } else {
-            $element->setAttribute('class', 'btn btn-success');
+            $element->setAttribute('class', 'btn btn-register');
         }
         if ($element instanceof Zend\Form\Element\Captcha) {
             echo $this->formCaptcha($element);
@@ -45,8 +51,13 @@ echo $this->form()->openTag($form);
 
 <?php
 endforeach;?>
-<input class="btn btn-success" type="submit" value="Submit" />
+<input class="btn btn-register" type="submit" value="Submit" />
 <?php if ($this->redirect): ?>
     <input type="hidden" name="redirect" value="<?php echo $this->escapeHtml($this->redirect) ?>" />
 <?php endif ?>
 <?php echo $this->form()->closeTag() ?>
+
+            </div>
+        </div>
+    </div>
+</div>

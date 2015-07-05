@@ -1,6 +1,12 @@
-<div class="page-header">
-    <h1><?php echo $this->translate('Register'); ?></h1>
-</div>
+<div class="bg-light-grey">
+    <div class="container">
+        <div class="page-header">
+            <h1><?php echo $this->translate('Register'); ?></h1>
+        </div>
+        <div class="row vpadded-row">
+            <div class="col-md-5">
+
+
 
 <?php
 if (!$this->enableRegistration) {
@@ -24,7 +30,7 @@ echo $this->form()->openTag($form);
             $element->setAttribute('class', 'form-control')
                 ->setAttribute('placeholder', $element->getLabel());
         } else {
-            $element->setAttribute('class', 'btn btn-success');
+            $element->setAttribute('class', 'btn btn-register');
         }
         if ($element instanceof Zend\Form\Element\Captcha) {
             echo $this->formCaptcha($element);
@@ -48,3 +54,19 @@ if ($this->redirect): ?>
     <input type="hidden" name="redirect" value="<?php echo $this->escapeHtml($this->redirect) ?>" />
 <?php endif ?>
 <?php echo $this->form()->closeTag() ?>
+
+            </div>
+            <div class="col-md-5 col-md-offset-2">
+              <div class="well">
+            <h3>Why Register?</h3>
+                <ul>
+                    <li>Great reason one</li>
+                    <li>Great reason two</li>
+                    <li>Great reason three</li>
+                    <li>An infographic or video would be ideal here...</li>
+                </ul>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
