@@ -90,6 +90,7 @@ return array(
         ),
         'template_path_stack' => array(
             __DIR__ . '/../view',
+            'zfc-user' => __DIR__ . '/../view',
         ),
     ),
     // Placeholder for console routes
