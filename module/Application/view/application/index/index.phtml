@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row vpadded-row">
             <div class="col-md-5">
-                <h1><?php echo sprintf($this->translate('%s Foundation App...%s'), '<span class="brand-emphasis">', '</span>') ?></h1>
+                <h1> <?php echo sprintf($this->translate('%s%s&nbsp;Foundation App...%s'), '<span class="brand-emphasis">', '<span class="brand-logo glyphicon glyphicon-tree-deciduous"></span>', '</span>') ?></h1>
                 <p class="spaced-text vpadding30"><?php echo sprintf($this->translate('This Foundation App is a work in progress based on the Zend 2 MVC Skeleton App. I will be building on the app on the %sGit Hub Repo%s'), '<a href="https://github.com/JohnD-EE/FoundationApp" target="_blank">', '</a>') ?></p>
             </div>
             <div class="col-md-7">
@@ -17,13 +17,22 @@
     <div class="container">
         <div class="row vpadded-row">
 
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <h2>Register</h2>
-                <p>An encouragement to get the person to sign up...</p>
+                <p>Some enticing words or pictures as encouragement to persuade a user to sign up...</p>
                 </div>
-            <div class="col-md-6">
-                <input type="text" value="" placeholder="Your Email" />
-                <button type="submit" class="btn-register">Register</button>
+            <div class="col-md-4">
+
+                <form method="post" action="/user/login">
+                    <div class="form-group ">
+                        <label class="control-label">Your Email</label>
+                        <input name="identity" type="text" class="form-control" placeholder="Enter Your Email" value="">    </div>
+
+                    <div class="form-group ">
+                        <button type="submit" name="submit" class="btn-register btn-wide" value="">Register</button>    </div>
+
+                </form>
+
             </div>
 
         </div>
