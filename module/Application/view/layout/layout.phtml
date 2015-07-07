@@ -34,16 +34,31 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?php echo $this->url('home') ?>"><span class="icon icon-grain"></span>&nbsp;<?php echo $this->translate('Foundation App') ?></a>
+                    <a class="navbar-brand" href="<?php echo $this->zfcUserIdentity()? $this->url('application/innerpage') : $this->url('home') ?>"><span class="brand-logo glyphicon glyphicon-tree-deciduous"></span>&nbsp;<?php echo $this->translate('<em>foundation</em><b>App</b>') ?></a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav pull-right">
+                        <!-- Test if the User is connected -->
+                        <?php if(!$this->zfcUserIdentity()): ?>
                         <li class="active"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
-                        <li class=""><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Pricing') ?></a></li>
-                        <li class=""><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Partners') ?></a></li>
-                        <li class=""><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Blog') ?></a></li>
-                        <li class="btn-register"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Register') ?></a></li>
-                        <li class="btn-login"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Login') ?></a></li>
+                        <li class=""><a href="<?php echo $this->url('application/supportingpage') ?>"><?php echo $this->translate('Pricing') ?></a></li>
+                        <li class=""><a href="<?php echo $this->url('application/supportingpage') ?>"><?php echo $this->translate('Partners') ?></a></li>
+                        <li class=""><a href="<?php echo $this->url('application/supportingpage') ?>"><?php echo $this->translate('Blog') ?></a></li>
+
+                            <!-- display regster and login buttons -->
+                            <li class="btn-register"><a href="<?php echo $this->url('zfcuser/register') ?>"><?php echo $this->translate('Register') ?></a></li>
+                            <li class="btn-login"><a href="<?php echo $this->url('zfcuser/login') ?>"><?php echo $this->translate('Login') ?></a></li>
+                        <?php else: ?>
+                            <li class=""><a href="<?php echo $this->url('application/innerpage') ?>"><?php echo $this->translate('Inner Page 1') ?></a></li>
+                            <li class=""><a href="<?php echo $this->url('application/innerpage') ?>"><?php echo $this->translate('Inner Page 2') ?></a></li>
+                            <li class=""><a href="<?php echo $this->url('application/innerpage') ?>"><?php echo $this->translate('Inner Page 3') ?></a></li>
+
+                            <!-- show the 'display name' of the user -->
+                            <li class=""><a href="<?php echo $this->url('zfcuser') ?>"><span class="glyphicon glyphicon-user"></span>&nbsp;</span>
+                                <?php echo $this->zfcUserIdentity()->getEmail(); ?>
+                            </a>a></li>
+                        <?php endif?>
+
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>

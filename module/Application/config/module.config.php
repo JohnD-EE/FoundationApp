@@ -8,6 +8,18 @@
  */
 
 return array(
+    'di' => array(
+        'instance' => array(
+            'Zend\View\HelperLoader' => array(
+                'parameters' => array(
+                    'map' => array(
+                        'zfcUserIdentity' => 'ZfcUser\View\Helper\ZfcUserIdentity',
+                        'zfcUserLoginWidget' => 'ZfcUser\View\Helper\ZfcUserLoginWidget',
+                    ),
+                ),
+            ),
+        ),
+    ),
     'router' => array(
         'routes' => array(
             'home' => array(
@@ -45,6 +57,26 @@ return array(
                                 'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
                             ),
                             'defaults' => array(
+                            ),
+                        ),
+                    ),
+                    'supportingpage' => array(
+                        'type' => 'literal',
+                        'options' => array(
+                            'route' => '/supportingpage',
+                            'defaults' => array(
+                                'controller' => 'Application\Controller\Index',
+                                'action' => 'supportingpage',
+                            ),
+                        ),
+                    ),
+                    'innerpage' => array(
+                        'type' => 'literal',
+                        'options' => array(
+                            'route' => '/innerpage',
+                            'defaults' => array(
+                                'controller' => 'Application\Controller\Index',
+                                'action' => 'innerpage',
                             ),
                         ),
                     ),
@@ -89,7 +121,8 @@ return array(
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
         ),
         'template_path_stack' => array(
-            __DIR__ . '/../view',
+
+            'zfc-user' => __DIR__ . '/../view',
         ),
     ),
     // Placeholder for console routes
