@@ -1,5 +1,5 @@
 <?php
-namespace Blog;
+namespace Portal;
 
 class Module
 {
