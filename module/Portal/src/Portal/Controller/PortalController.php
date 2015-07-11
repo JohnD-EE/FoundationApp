@@ -1,10 +1,10 @@
 <?php
-namespace Blog\Controller;
+namespace Portal\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
-class BlogController extends AbstractActionController
+class PortalController extends AbstractActionController
 {
     /**
      * (non-PHPdoc)
