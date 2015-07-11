@@ -8,13 +8,13 @@
 return array(
     'modules' => array(
         'ZendDeveloperTools',
-        'Application',
         'DoctrineModule',
         'DoctrineORMModule',
         'ZfcBase',
         'ZfcUser',
         'ZfcUserDoctrineORM',
-        'Blog',
+        'Application', //Application contains files which override zfcUser views so must be loaded after zfcUser
+        'Portal',
     ),
     'module_listener_options' => array(
         'module_paths' => array(

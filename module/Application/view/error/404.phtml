@@ -1,4 +1,13 @@
-<h1><?php echo $this->translate('A 404 error occurred') ?></h1>
+<div class="bg-light-grey">
+    <div class="container">
+        <div class="page-header">
+            <h1><?php echo $this->translate('A 404 error occurred') ?></h1>
+        </div>
+        <div class="row vpadded-row">
+            <div class="col-md-12">
+
+
+
 <h2><?php echo $this->message ?></h2>
 
 <?php if (isset($this->reason) && $this->reason): ?>
@@ -105,3 +114,9 @@ if (isset($this->controller_class)
 <?php endif ?>
 
 <?php endif ?>
+
+
+            </div>
+        </div>
+    </div>
+</div>
