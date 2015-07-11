@@ -1,8 +1,8 @@
 <?php
 /**
- * Display all errors when APPLICATION_ENV is development.
+ * Display all errors when APP_ENV is development.
  */
-if ('development' === $_SERVER['APPLICATION_ENV']) {
+if ('development' === $_SERVER['APP_ENV']) {
     error_reporting(E_ALL);
     ini_set("display_errors", 1);
 }
